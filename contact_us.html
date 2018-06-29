@@ -1,0 +1,142 @@
+<html>
+<head>
+    <title>contact me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+    <style>
+/** {box-sizing: border-box;}*/
+
+/*
+body { 
+  margin: 0;
+  font-family: Arial;
+}
+*/
+
+.header {
+  overflow: hidden;
+  background-color:whitesmoke;
+  padding: 19px 53px;
+  margin-top:-31px;
+    width: 100%;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;    
+}
+
+.header-right {
+  float: right;
+    margin-top: 31px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+     .logo{
+        height:89px;
+        width: 141px;
+    }
+
+        .ab{
+            font-size:40px;
+            font-family: Arial Black;
+            letter-spacing: 1.5;
+        } 
+        .glyphicon-home{
+            font-size: 20px;
+            
+        }
+        .glyphicon-earphone {
+         font-size: 20px;   
+        } 
+        .glyphicon-envelope{
+         font-size: 20px;   
+        }
+        #map{
+             border-radius: 25px;
+        }
+        .header-right a.active{
+            background-color: darkorange;
+    color: white;
+        }
+</style>
+<body style="background-color:orange">
+
+<div class="header">
+  <a href="main.html" class="logo"><img src="logo.jpg" class="logo"></a>
+  <div class="header-right">
+    <a href="about_me.html">ABOUT ME</a>
+    <a href="skills.html">MY SKILLS</a>
+    <a href="education.html">EDUCATION</a>
+      <a href="project.html">PROJECTS</a>
+      <a href="certificate.html">CERTIFICATES</a>
+      <a class="active" href="contact_us.html">CONTACTS</a>
+  </div>
+</div><br><br>
+<div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+        <span class="ab">CONTACT</span><br><br><br>
+        <span class="glyphicon glyphicon-home"><span style="font-family:Times New Roman;font-size:30px;letter-spacing:1"> Premnagar, Dehradun, Uttarakhand</span></span><br><br>
+        <span class="glyphicon glyphicon-earphone"><span style="font-family:Times New Roman;font-size:30px;letter-spacing:1"> (+91)9598530699</span></span><br><br>
+        <span class="glyphicon glyphicon-envelope"><span style="font-family:Times New Roman;font-size:30px;letter-spacing:1"> imabhishek.100@gmail.com</span></span>
+        </div>
+        <div class="col-sm-6">
+            <span class="glyphicon glyphicon-map-marker" style="font-size:20px;"><span style="font-family:Times New Roman;font-size:30px;letter-spacing:1"> Locate Me At</span></span><br><br>
+            <div id="map" style="width:400px;height:400px;background:yellow"></div>
+        <script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(30.3344, 77.9596),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA81EcANgTll1IHWf0ONBVVaczLUK0bLE4&callback=myMap"></script>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

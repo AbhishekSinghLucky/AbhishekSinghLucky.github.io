@@ -1,0 +1,269 @@
+
+<html>
+<head><title>My Skills</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+/** {box-sizing: border-box;}*/
+
+/*
+body { 
+  margin: 0;
+  font-family: Arial;
+}
+*/
+
+.header {
+  overflow: hidden;
+  background-color:whitesmoke;
+  padding: 19px 53px;
+  margin-top:-31px;
+    width: 100%;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;    
+}
+
+.header-right {
+  float: right;
+    margin-top: 31px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+     .logo{
+        height:89px;
+        width: 141px;
+    }
+        
+      
+
+    
+    
+    
+    
+    
+ *{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content1 {
+    position: fixed;
+    top: 0;
+/*    background: rgba(0, 0, 0, 0.5);*/
+    color: #f1f1f1;
+    width: 100%;
+/*    padding: 20px;*/
+}
+.content2{
+      position: fixed;
+        bottom:20;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding:40px;
+     -webkit-animation: mymove 2s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 2s ;
+    }
+    @-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+@keyframes mymove {
+    from {left: -1400px;}
+    to {left: 10px;}
+}
+/** {box-sizing: border-box}*/
+
+.container {
+  width: 66%;
+  background-color: #ddd;
+margin-left: 345px;
+   border-radius: 15px; 
+}
+
+.skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;margin-left: -15px;}
+.css {width: 80%; background-color: #2196F3;margin-left: -15px;}
+.js {width: 50%; background-color: #f44336;margin-left: -15px;}
+.php {width: 60%; background-color: sandybrown;margin-left: -15px;}
+.java {width: 70%; background-color:#BA55D3;margin-left: -15px;}
+
+    .skill_description{
+        font-size: 20px;
+        font-family: monospace;
+    }
+    .header-right a.active{
+            background-color: darkorange;
+    color: white;
+        }
+</style>    
+<body>
+<div class="video" style="position:fixed;">
+       <div class="header"></div>
+<video autoplay muted loop id="myVideo">
+  <source src="skill.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<div class="content1">
+
+ <div class="header">
+  <a href="main.html" class="logo"><img src="logo.jpg" class="logo"></a>
+  <div class="header-right">
+    <a href="about_me.html">ABOUT ME</a>
+    <a class="active" href="skills.html">MY SKILLS</a>
+    <a href="education.html">EDUCATION</a>
+      <a href="project.html">PROJECTS</a>
+      <a href="certificate.html">CERTIFICATES</a>
+      <a href="contact_us.html">CONTACTS</a>
+  </div>
+</div>      
+</div>
+ 
+<div class="content2">
+
+    <span style="font-size:30px;color:orange;font-family:Arial Black">SKILLS</span><br><span class="skill_description">Build.Run.Repeat</span>  
+ <div class="container">
+    
+  <div class="skills html">HTML 90%</div>
+</div>
+<br>
+<div class="container">
+  <div class="skills css">CSS 80%</div>
+</div>
+<br>
+<div class="container">
+  <div class="skills js">JS 50%</div>
+</div>
+<br>
+<div class="container">
+  <div class="skills php">PHP 60%</div>
+</div>
+<br>
+<div class="container">
+  <div class="skills java">JAVA 70%</div>
+</div>     
+    
+</div>     
+<script>
+var video = document.getElementById("myVideo");
+
+
+
+</script>
+ <script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+    </script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
